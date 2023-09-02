@@ -11,6 +11,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>User:Home</h1>
+	<h1>User:Home </h1>
+	<h2>It contain home functionality</h2>
 </body>
 </html>
