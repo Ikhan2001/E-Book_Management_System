@@ -1,4 +1,4 @@
-<%@page import="com.user.DAO.UserDAOImpl"%>
+<%@page import="com.DAO.UserDAOImpl"%>
 <%@page import="com.user.entity.User"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>

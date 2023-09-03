@@ -51,7 +51,7 @@
 				<div class="col-md-3">
 					<div class="card crd-ho">
 						<div class="card-body text-center">
-							<img alt="" class="book-card" src="img/books/b1.jpg"
+							<img alt="" class="book-card" src="books/b1.jpg"
 								class="img-thumblin">
 							<p>Java a Complete Practical</p>
 							<p>Swati Saxena</p>
@@ -69,7 +69,7 @@
 				<div class="col-md-3">
 					<div class="card crd-ho">
 						<div class="card-body text-center">
-							<img alt="" class="book-card" src="img/books/b2.jpg"
+							<img alt="" class="book-card" src="books/b2.jpg"
 								class="img-thumblin">
 							<p>Atomic Habits</p>
 							<p>James Clear</p>
@@ -87,7 +87,7 @@
 				<div class="col-md-3">
 					<div class="card crd-ho">
 						<div class="card-body text-center">
-							<img alt="" class="book-card" src="img/books/b3.jpg"
+							<img alt="" class="book-card" src="books/b3.jpg"
 								class="img-thumblin">
 							<p>It Starts with Us</p>
 							<p>Atria Books</p>
@@ -105,7 +105,7 @@
 				<div class="col-md-3">
 					<div class="card crd-ho">
 						<div class="card-body text-center">
-							<img alt="" class="book-card" src="img/books/b4.jpg"
+							<img alt="" class="book-card" src="books/b4.jpg"
 								class="img-thumblin">
 							<p>Love and Other Words</p>
 							<p>Christina Lauren</p>
@@ -134,7 +134,7 @@
 				<div class="col-md-3">
 					<div class="card crd-ho">
 						<div class="card-body text-center">
-							<img alt="" class="book-card" src="img/books/b1.jpg"
+							<img alt="" class="book-card" src="books/b1.jpg"
 								class="img-thumblin">
 							<p>Java a Complete Practical</p>
 							<p>Swati Saxena</p>
@@ -151,7 +151,7 @@
 				<div class="col-md-3">
 					<div class="card crd-ho">
 						<div class="card-body text-center">
-							<img alt="" class="book-card" src="img/books/b2.jpg"
+							<img alt="" class="book-card" src="books/b2.jpg"
 								class="img-thumblin">
 							<p>Atomic Habits</p>
 							<p>James Clear</p>
@@ -168,7 +168,7 @@
 				<div class="col-md-3">
 					<div class="card crd-ho">
 						<div class="card-body text-center">
-							<img alt="" class="book-card" src="img/books/b3.jpg"
+							<img alt="" class="book-card" src="books/b3.jpg"
 								class="img-thumblin">
 							<p>It Starts with Us</p>
 							<p>Atria Books</p>
@@ -185,7 +185,7 @@
 				<div class="col-md-3">
 					<div class="card crd-ho">
 						<div class="card-body text-center">
-							<img alt="" class="book-card" src="img/books/b4.jpg"
+							<img alt="" class="book-card" src="books/b4.jpg"
 								class="img-thumblin">
 							<p>Love and Other Words</p>
 							<p>Christina Lauren</p>

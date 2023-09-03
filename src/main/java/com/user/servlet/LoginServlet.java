@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.DAO.UserDAOImpl;
 import com.DB.DBConnect;
-import com.user.DAO.UserDAOImpl;
 import com.user.entity.User;
 
 @WebServlet(name="login",urlPatterns = {"/login.ik"})
@@ -49,3 +49,4 @@ public class LoginServlet extends HttpServlet{
 	}
 
 }
+

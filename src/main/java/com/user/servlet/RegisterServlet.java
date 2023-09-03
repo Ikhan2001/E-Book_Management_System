@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.DAO.UserDAOImpl;
 import com.DB.DBConnect;
-import com.user.DAO.UserDAOImpl;
 import com.user.entity.User;
 
 @WebServlet(name="register", urlPatterns = {"/register.ik"})
@@ -46,22 +46,27 @@ public class RegisterServlet extends HttpServlet{
 				String msg="<font color=green>Registration Successfully...</font>";
 				req.setAttribute("Msg",msg );
 				page="register.jsp";
+				RequestDispatcher rd=req.getRequestDispatcher(page);
+				rd.forward(req, resp);
 				
 			}else {
 				//System.out.println("Something went wrong on Server");
 				String msg="<font color=red>Something went wrong on Server</font>";
 				req.setAttribute("Msg", msg);
 				page="register.jsp";
+				RequestDispatcher rd=req.getRequestDispatcher(page);
+				rd.forward(req, resp);
 			}
 		}else {
 			//System.out.println("Please Click Agree On Terms & Cond.");
 			String msg="<font color=red>Please Click Agree On Terms & Cond.</font>";
 			req.setAttribute("Msg", msg);
 			page="register.jsp";
+			RequestDispatcher rd=req.getRequestDispatcher(page);
+			rd.forward(req, resp);
 		}
 		
-		RequestDispatcher rd=req.getRequestDispatcher(page);
-		rd.forward(req, resp);
+		
 		
 	}
 	

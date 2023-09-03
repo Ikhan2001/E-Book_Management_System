@@ -1,4 +1,4 @@
-package com.user.DAO;
+package com.DAO;
 
 import com.user.entity.User;
 
