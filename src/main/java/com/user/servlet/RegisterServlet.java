@@ -42,28 +42,19 @@ public class RegisterServlet extends HttpServlet{
 			boolean f=dao.userRegister(us);
 			
 			if(true) {
-				//System.out.println("User inserted Successfully");
-				String msg="<font color=green>Registration Successfully...</font>";
-				req.setAttribute("Msg",msg );
-				page="register.jsp";
-				RequestDispatcher rd=req.getRequestDispatcher(page);
-				rd.forward(req, resp);
+				
+				session.setAttribute("succMsg", "Registration Successfully...");
+				resp.sendRedirect("register.jsp");
 				
 			}else {
-				//System.out.println("Something went wrong on Server");
-				String msg="<font color=red>Something went wrong on Server</font>";
-				req.setAttribute("Msg", msg);
-				page="register.jsp";
-				RequestDispatcher rd=req.getRequestDispatcher(page);
-				rd.forward(req, resp);
+				session.setAttribute("failedMsg", "Something went wrong on Server");
+				resp.sendRedirect("register.jsp");
 			}
 		}else {
-			//System.out.println("Please Click Agree On Terms & Cond.");
-			String msg="<font color=red>Please Click Agree On Terms & Cond.</font>";
-			req.setAttribute("Msg", msg);
-			page="register.jsp";
-			RequestDispatcher rd=req.getRequestDispatcher(page);
-			rd.forward(req, resp);
+
+			session.setAttribute("failedMsg", "Please Click Agree On Terms & Cond.");
+			resp.sendRedirect("register.jsp");
+
 		}
 		
 		

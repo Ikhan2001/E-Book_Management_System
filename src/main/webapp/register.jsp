@@ -1,9 +1,11 @@
-<%@page import="org.apache.taglibs.standard.tag.common.fmt.RequestEncodingSupport"%>
+<%@page
+	import="org.apache.taglibs.standard.tag.common.fmt.RequestEncodingSupport"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1" %>
+	pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@page isELIgnored="false"%>
 <!DOCTYPE html>
 <html>
- <%@ taglib  uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <head>
 <meta charset="ISO-8859-1">
 <title>EBook:Register</title>
@@ -18,39 +20,34 @@
 				<div class="card">
 					<div class="card-body">
 						<h4 class="text-center">Registration Page</h4>
-						<div align="center">					
-						<%
-							Object obj=request.getAttribute("Msg");
-							if(obj != null){
-								out.print(obj);
-							}
-						%>
-						</div>	
+						
 						<c:if test="${not empty succMsg }">
-						<p class="text-center text-success">${succMsg}</p>
+							<p class="text-center text-success">${succMsg}</p>
+							<c:remove var="succMsg" scope="session"/>
 						</c:if>
 						<c:if test="${not empty failedMsg }">
-						<p class="text-center text-danger">${failedMsg}</p>
+							<p class="text-center text-danger">${failedMsg}</p>
+							<c:remove var="failedMsg" scope="session"/>
 						</c:if>
-						<c:if test="${succMsg}">
-						<p class="text-center text-success">${succMsg}</p>
-						</c:if>
-						
+
 						<form name="register" action="register.ik" method="post">
 							<div class="form-group">
 								<label for="exampleInputEmail1">Enter Full Name</label> <input
 									type="text" class="form-control" id="exampleInputEmail1"
-									aria-describedby="emailHelp" placeholder="Enter Name" name="fname">
+									aria-describedby="emailHelp" placeholder="Enter Name"
+									name="fname">
 							</div>
 							<div class="form-group">
 								<label for="exampleInputEmail1">Email address</label> <input
 									type="email" class="form-control" id="exampleInputEmail1"
-									aria-describedby="emailHelp" placeholder="Enter email" required="required" name="email">
+									aria-describedby="emailHelp" placeholder="Enter email"
+									required="required" name="email">
 							</div>
 							<div class="form-group">
 								<label for="exampleInputEmail1">Phone No</label> <input
 									type="number" class="form-control" id="exampleInputEmail1"
-									aria-describedby="emailHelp" placeholder="Enter Phone No." name="phno">
+									aria-describedby="emailHelp" placeholder="Enter Phone No."
+									name="phno">
 							</div>
 							<div class="form-group">
 								<label for="exampleInputPassword1">Password</label> <input

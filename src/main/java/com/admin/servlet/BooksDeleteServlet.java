@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.DAO.BookDAOImpl;
 import com.DB.DBConnect;
@@ -22,16 +23,14 @@ public class BooksDeleteServlet extends HttpServlet {
 		
 		BookDAOImpl dao=new BookDAOImpl(DBConnect.getConnection());
 		boolean f=dao.deleteBooks(id);
+		HttpSession session=req.getSession();
 		
-		String page="";
-		String msg="";
 		if(f) {
-			msg="<font color=green >Book Delete Successfully</font>";
+			session.setAttribute("succMsg", "Book Delete Successfully");
 			resp.sendRedirect("admin/all_books.jsp");
 		}else {
-			msg="<font color=red >Something Wrong On Server</font>";
+			session.setAttribute("failedMsg", "Something Wrong On Server");
 			resp.sendRedirect("admin/all_books.jsp");
-			
 		}
 	}
 	

@@ -50,17 +50,14 @@ public class BookAdd extends HttpServlet{
 		HttpSession session=req.getSession();
 		String page="";
 		if(f) {
-			String Msg="<font color=green >Book Add Successfully</font>";
-			req.setAttribute("Msg", Msg);
-			page="admin/add_books.jsp";
-			RequestDispatcher rd=req.getRequestDispatcher(page);
-			rd.forward(req, resp);
+			
+			session.setAttribute("succMsg","Book Add Successfully");
+			resp.sendRedirect("admin/add_books.jsp");
+			
 		}else {
-			String Msg="<font color=red >Something wrong on server</font>";
-			req.setAttribute("Msg",Msg);
-			page="admin/add_books.jsp";
-			RequestDispatcher rd=req.getRequestDispatcher(page);
-			rd.forward(req, resp);
+			
+			session.setAttribute("failedMsg","Something wrong on server");
+			resp.sendRedirect("admin/add_books.jsp");
 		}
 		
 	}

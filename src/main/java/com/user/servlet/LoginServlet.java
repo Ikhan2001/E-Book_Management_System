@@ -29,6 +29,7 @@ public class LoginServlet extends HttpServlet{
 		
 		if("admin@gmail.com".equals(email) && "admin".equals(password)) {
 			User us=new User();
+			us.setName("Intkhab");
 			session.setAttribute("userobj", us);
 			resp.sendRedirect("admin/home.jsp");
 		}else {
@@ -38,12 +39,10 @@ public class LoginServlet extends HttpServlet{
 				session.setAttribute("userobj", us);
 				resp.sendRedirect("home.jsp");
 			}else {
-				String msg="<font color=red>Email & Password is Invalid !!!</font>";
-				req.setAttribute("Msg", msg);
-				String page="login.jsp";
-				RequestDispatcher rd=req.getRequestDispatcher(page);
-				rd.forward(req, resp);
+				session.setAttribute("failedMsg", "Email & Password is Invalid !!!");
+				resp.sendRedirect("login.jsp");
 			}
+
 		}
 		
 	}

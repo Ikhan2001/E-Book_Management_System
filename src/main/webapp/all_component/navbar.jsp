@@ -1,5 +1,5 @@
 <div class="container-fluid"
-	style="height: 10px; background-color: #1e88e5;"></div>
+	style="height: 10px; background-color: rgb(6, 28, 215);"></div>
 
 <div class="container-fluid p-3 bglight">
 

@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.DAO.BookDAOImpl;
 import com.DB.DBConnect;
@@ -35,20 +36,17 @@ public class EditBookServlet extends HttpServlet{
 		
 		BookDAOImpl dao=new BookDAOImpl(DBConnect.getConnection());
 		boolean f=dao.updateEditBooks(b);
-		String page="";
-		String msg="";
+		HttpSession session=req.getSession();
+		
 		if(f) {
-			msg="<font color=green >Book Update Successfully</font>";
-			req.setAttribute("Msg", msg);
-			page="admin/all_books.jsp";
+			session.setAttribute("succMsg", "Book Update Successfully");
+			resp.sendRedirect("admin/all_books.jsp");
 		}else {
-			msg="<font color=red >Something Wrong On Server</font>";
-			req.setAttribute("Msg", msg);
-			page="admin/all_books.jsp";
+			
+			session.setAttribute("failedMsg", "Something Wrong On Server");
+			resp.sendRedirect("admin/all_books.jsp");
 			
 		}
-		RequestDispatcher rd=req.getRequestDispatcher(page);
-		rd.forward(req, resp);
 	}
 	
 }

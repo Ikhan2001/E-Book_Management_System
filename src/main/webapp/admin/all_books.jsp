@@ -6,6 +6,8 @@
 <%@page import="com.DAO.BookDAO"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@page isELIgnored="false"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,15 +17,21 @@
 </head>
 <body>
 	<%@include file="navbar.jsp"%>
+	<c:if test="${empty userobj }">
+		<c:redirect url="../login.jsp" />
+	</c:if>
 
 	<h3 class="text-center">Hello Admin</h3>
-	<%
-	Object obj = request.getAttribute("Msg");
-	if (obj != null) {
-		response.sendRedirect("admin/all_books.jsp");
-		out.print(obj);
-	}
-	%>
+
+	<c:if test="${not empty succMsg }">
+		<h4 class="text-center text-success">${succMsg}</h4>
+		<c:remove var="succMsg" scope="session" />
+	</c:if>
+
+	<c:if test="${not empty failedMsg }">
+		<h4 class="text-center text-danger">${failedMsg}</h4>
+		<c:remove var="failedMsg" scope="session" />
+	</c:if>
 
 	<table class="table table-striped">
 		<thead class="bg-primary text-white">
@@ -55,11 +63,12 @@
 				<td><%=b.getPrice()%></td>
 				<td><%=b.getBookCategory()%></td>
 				<td><%=b.getStatus()%></td>
-				<td>
-					<a href="edit_books.jsp?id=<%=b.getBookId()%>" class="btn btn-sm btn-primary">Edit</a> 
-					<a href="../delete?id=<%=b.getBookId()%>" class="btn btn-sm btn-danger">Delete</a>
-					
-				</td>
+				<td><a href="edit_books.jsp?id=<%=b.getBookId()%>"
+					class="btn btn-sm btn-primary"><i
+						class="fa-solid fa-pen-to-square"></i> Edit</a> <a
+					href="../delete?id=<%=b.getBookId()%>"
+					class="btn btn-sm btn-danger"><i class="fa-solid fa-trash"></i>
+						Delete</a></td>
 			</tr>
 			<%
 			}

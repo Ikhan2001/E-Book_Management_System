@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"  %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@page isELIgnored="false"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,6 +11,10 @@
 </head>
 <body>
 	<%@include file="navbar.jsp"%>
+	
+	<c:if test="${empty userobj }">
+		<c:redirect url="../login.jsp" />
+	</c:if>
 
 	<div id="wrapper">
 		<div class="contaier p-3">
@@ -18,14 +23,7 @@
 					<div class="card">
 						<div class="card-body">
 							<h4 class="text-center">Add Books</h4>
-							<div align="center">
-							<%
-							Object obj=request.getAttribute("Msg");
-							if(obj != null){
-								out.print(obj);
-							}
-							%>
-							</div>
+							
 							<c:if test="${not empty succMsg }">
 							
 							<p class="text-center text-success">${succMsg}</p>

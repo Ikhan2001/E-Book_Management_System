@@ -9,10 +9,10 @@
     background-color: rgb(242, 242, 242);	
 }
 .bg-custom{
-	background-color:#2196f3; 
+	background-color:rgb(6, 28, 215);
 }
 .navbar .nav-item:hover .nav-link{
 	background-color:white;
-	color:#2196f3;
+	color:rgb(6, 28, 215);
 	border-radius:15px; 
 }
