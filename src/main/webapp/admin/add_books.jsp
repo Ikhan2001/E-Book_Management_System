@@ -62,6 +62,7 @@
 										class="form-control" id="inputState" name="category">
 										<option selected>Select</option>
 										<option value="New">New Book</option>
+										<option value="Old">Old Book</option>
 									</select>
 								</div>
 
