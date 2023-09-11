@@ -23,7 +23,7 @@
 
 .book-card {
 	width: 150px;
-	height: 200px;
+	height: 220px;
 }
 
 .crd-ho:hover {
@@ -49,7 +49,7 @@
 
 		<!--Start Recent Book -->
 		<hr>
-		<div class="container">
+		<div class="container-fluid">
 			<h3 class="text-center mb-5 mt-3">Recent Book</h3>
 			<div class="row">
 				<%
@@ -73,7 +73,7 @@
 								<%=b.getBookCategory()%>
 
 								<div class="row"><a href="" class="btn btn-success btn-sm ml-5">View Details</a>
-								<a href="" class="btn btn-danger btn-sm ml-1"><%=b.getPrice()%>
+								<a href="" class="btn btn-danger btn-sm ml-4"><%=b.getPrice()%>
 									<i class="fa-solid fa-indian-rupee-sign"></i></a></div>
 							<%
 							} else {
@@ -81,10 +81,10 @@
 							Category:
 							<%=b.getBookCategory()%>
 							<div class="row">
-								<a href="" class="btn btn-danger btn-sm"><i
-									class="fa-solid fa-cart-shopping"></i> Add Cart</a> <a href=""
-									class="btn btn-success btn-sm">View Details</a> <a href=""
-									class="btn btn-danger btn-sm"><%=b.getPrice()%> <i
+								<a href="" class="btn btn-danger btn-sm ml-5"><i
+									class="fa-solid fa-cart-shopping "></i> Add Cart</a> <a href=""
+									class="btn btn-success btn-sm ml-2">View Details</a> <a href=""
+									class="btn btn-danger btn-sm ml-2"><%=b.getPrice()%> <i
 									class="fa-solid fa-indian-rupee-sign"></i></a>
 							</div>
 							<%
@@ -101,7 +101,7 @@
 			</div>
 
 			<div class="text-center mt-4">
-				<a href="" class="btn btn-danger btn-sm">View All</a>
+				<a href="all_recent_book.jsp" class="btn btn-danger btn-sm">View All</a>
 			</div>
 		</div>
 		<!--Recent Book -->
@@ -109,7 +109,7 @@
 
 		<!--Start New Book -->
 		<hr>
-		<div class="container">
+		<div class="container-fluid">
 			<h3 class="text-center mb-5 mt-3">New Book</h3>
 			<div class="row">
 				<%
@@ -128,10 +128,10 @@
 								Category:
 								<%=b.getBookCategory()%></p>
 							<div class="row">
-								<a href="" class="btn btn-danger btn-sm "><i
+								<a href="" class="btn btn-danger btn-sm ml-5"><i
 									class="fa-solid fa-cart-shopping"></i> Add Cart</a> <a href=""
-									class="btn btn-success btn-sm ml-1">View Details</a> <a href=""
-									class="btn btn-danger btn-sm"><%=b.getPrice()%> <i
+									class="btn btn-success btn-sm ml-2">View Details</a> <a href=""
+									class="btn btn-danger btn-sm ml-2"><%=b.getPrice()%> <i
 									class="fa-solid fa-indian-rupee-sign"></i></a>
 							</div>
 						</div>
@@ -145,13 +145,13 @@
 
 			</div>
 			<div class="text-center mt-4">
-				<a href="" class="btn btn-danger btn-sm">View All</a>
+				<a href="all_new_book.jsp" class="btn btn-danger btn-sm">View All</a>
 			</div>
 		</div>
 		<!--End New Book -->
 		<hr>
 		<!--Start Old Book -->
-		<div class="container">
+		<div class="container-fluid">
 			<h3 class="text-center mb-5 mt-3">Old Book</h3>
 			<div class="row">
 
@@ -167,10 +167,10 @@
 								class="img-thumblin">
 							<p><%=b.getBookName()%></p>
 							<p><%=b.getAuthor()%></p>
-							<p><%=b.getBookCategory()%></p>
+							<p>Category: <%=b.getBookCategory()%></p>
 							<div class="row">
 								<a href="" class="btn btn-success btn-sm ml-5">View Details</a>
-								<a href="" class="btn btn-danger btn-sm ml-1"><%=b.getPrice()%>
+								<a href="" class="btn btn-danger btn-sm ml-4"><%=b.getPrice()%>
 									<i class="fa-solid fa-indian-rupee-sign"></i></a>
 							</div>
 
@@ -183,7 +183,7 @@
 				%>
 			</div>
 			<div class="text-center mt-4 mb-0">
-				<a href="" class="btn btn-danger btn-sm">View All</a>
+				<a href="all_old_book.jsp" class="btn btn-danger btn-sm">View All</a>
 			</div>
 			<hr>
 			<!--End Old Book -->
