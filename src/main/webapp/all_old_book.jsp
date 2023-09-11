@@ -47,7 +47,7 @@
 							<p><%=b.getAuthor()%></p>
 							<p>Category: <%=b.getBookCategory()%></p>
 							<div class="row">
-								<a href="" class="btn btn-success btn-sm ml-5">View Details</a>
+								<a href="view_book.jsp?bid=<%=b.getBookId() %>" class="btn btn-success btn-sm ml-5">View Details</a>
 								<a href="" class="btn btn-danger btn-sm ml-4"><%=b.getPrice()%>
 									<i class="fa-solid fa-indian-rupee-sign"></i></a>
 							</div>

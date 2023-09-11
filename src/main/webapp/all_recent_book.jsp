@@ -53,7 +53,7 @@
 									Category:
 									<%=b.getBookCategory()%>
 								<div class="row">
-									<a href="" class="btn btn-success btn-sm ml-5">View Details</a>
+									<a href="view_book.jsp?bid=<%=b.getBookId() %>" class="btn btn-success btn-sm ml-5">View Details</a>
 									<a href="" class="btn btn-danger btn-sm ml-4"><%=b.getPrice()%>
 										<i class="fa-solid fa-indian-rupee-sign "></i></a>
 								</div>
@@ -64,7 +64,7 @@
 								<%=b.getBookCategory()%>
 								<div class="row">
 									<a href="" class="btn btn-danger btn-sm ml-5"><i
-										class="fa-solid fa-cart-shopping"></i> Add Cart</a> <a href=""
+										class="fa-solid fa-cart-shopping"></i> Add Cart</a> <a href="view_book.jsp?bid=<%=b.getBookId() %>"
 										class="btn btn-success btn-sm ml-2">View Details</a> <a href=""
 										class="btn btn-danger btn-sm ml-2"><%=b.getPrice()%> <i
 										class="fa-solid fa-indian-rupee-sign"></i></a>

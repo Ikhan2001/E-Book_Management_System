@@ -25,7 +25,7 @@ a:hover {
 	</c:if>
 	<div id="wrapper">
 
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row p-5">
 				<div class="col-md-3">
 					<a href="add_books.jsp">

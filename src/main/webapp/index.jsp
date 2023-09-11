@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="all_component/style.css">
 <style type="text/css">
 .back-img {
-	background: url("img/book.jpg");
+	background: url("img/book2.jpg");
 	height: 50vh;
 	width: 100%;
 	background-repeat: no-repeat;
@@ -40,10 +40,10 @@
 
 
 
-		<div class="container-fluid back-img">
-			<h2 class="text-center text-white ">
-				<i class="fa-solid fa-book mt-3"></i> E-Book Management System
-			</h2>
+		<div class="container-fluid back-img ">
+			<h1 class="text-center text-dark font-italic">
+				<i class="fa-solid fa-book mt-4"></i>  E-Book Management System
+			</h1>
 		</div>
 
 
@@ -72,7 +72,7 @@
 								Category:
 								<%=b.getBookCategory()%>
 
-								<div class="row"><a href="" class="btn btn-success btn-sm ml-5">View Details</a>
+								<div class="row"><a href="view_book.jsp?bid=<%=b.getBookId() %>" class="btn btn-success btn-sm ml-5">View Details</a>
 								<a href="" class="btn btn-danger btn-sm ml-4"><%=b.getPrice()%>
 									<i class="fa-solid fa-indian-rupee-sign"></i></a></div>
 							<%
@@ -82,7 +82,7 @@
 							<%=b.getBookCategory()%>
 							<div class="row">
 								<a href="" class="btn btn-danger btn-sm ml-5"><i
-									class="fa-solid fa-cart-shopping "></i> Add Cart</a> <a href=""
+									class="fa-solid fa-cart-shopping "></i> Add Cart</a> <a href="view_book.jsp?bid=<%=b.getBookId() %>"
 									class="btn btn-success btn-sm ml-2">View Details</a> <a href=""
 									class="btn btn-danger btn-sm ml-2"><%=b.getPrice()%> <i
 									class="fa-solid fa-indian-rupee-sign"></i></a>
@@ -129,7 +129,7 @@
 								<%=b.getBookCategory()%></p>
 							<div class="row">
 								<a href="" class="btn btn-danger btn-sm ml-5"><i
-									class="fa-solid fa-cart-shopping"></i> Add Cart</a> <a href=""
+									class="fa-solid fa-cart-shopping"></i> Add Cart</a> <a href="view_book.jsp?bid=<%=b.getBookId() %>"
 									class="btn btn-success btn-sm ml-2">View Details</a> <a href=""
 									class="btn btn-danger btn-sm ml-2"><%=b.getPrice()%> <i
 									class="fa-solid fa-indian-rupee-sign"></i></a>
@@ -169,7 +169,7 @@
 							<p><%=b.getAuthor()%></p>
 							<p>Category: <%=b.getBookCategory()%></p>
 							<div class="row">
-								<a href="" class="btn btn-success btn-sm ml-5">View Details</a>
+								<a href="view_book.jsp?bid=<%=b.getBookId() %>" class="btn btn-success btn-sm ml-5">View Details</a>
 								<a href="" class="btn btn-danger btn-sm ml-4"><%=b.getPrice()%>
 									<i class="fa-solid fa-indian-rupee-sign"></i></a>
 							</div>
