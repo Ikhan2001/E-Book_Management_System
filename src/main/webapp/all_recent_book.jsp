@@ -1,3 +1,4 @@
+<%@page import="com.user.entity.User"%>
 <%@page import="com.DB.DBConnect"%>
 <%@page import="com.user.entity.BookDtls"%>
 <%@page import="java.util.List"%>
@@ -30,6 +31,9 @@
 </head>
 <body>
 	<%@include file="all_component/navbar.jsp"%>
+	<%
+	User u = (User) session.getAttribute("userobj");
+	%>
 	<div id="wrapper">
 		<div class="container-fluid">
 			<div class="row">
@@ -63,11 +67,25 @@
 								Category:
 								<%=b.getBookCategory()%>
 								<div class="row">
-									<a href="" class="btn btn-danger btn-sm ml-5"><i
-										class="fa-solid fa-cart-shopping"></i> Add Cart</a> <a href="view_book.jsp?bid=<%=b.getBookId() %>"
+								
+								<%
+								if (u == null) {
+								%>
+								<a href="login.jsp" class="btn btn-danger btn-sm ml-5"><i
+									class="fa-solid fa-cart-shopping"></i> Add Cart</a>
+								<%
+								} else {
+								%>
+								<a href="cart?bid=<%=b.getBookId()%>&&uid=<%=u.getId()%>"
+									class="btn btn-danger btn-sm ml-5"><i
+									class="fa-solid fa-cart-shopping"></i> Add Cart</a>
+								<%
+								}
+								%>	
+									 <a href="view_book.jsp?bid=<%=b.getBookId() %>"
 										class="btn btn-success btn-sm ml-2">View Details</a> <a href=""
-										class="btn btn-danger btn-sm ml-2"><%=b.getPrice()%> <i
-										class="fa-solid fa-indian-rupee-sign"></i></a>
+										class="btn btn-danger btn-sm ml-2"><i
+										class="fa-solid fa-indian-rupee-sign"></i> <%=b.getPrice()%> </a>
 								</div>
 								<%
 								}
