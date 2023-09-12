@@ -12,8 +12,8 @@
 <body>
 	<%@include file="all_component/navbar.jsp"%>
 	<div id="wrapper">
-		<div class="container p-5 ">
-			<div class="row">
+		<div class="container p-3 ">
+			<div class="row mt-5">
 				<div class="col-md-4 offset-md-4">
 					<div class="card">
 						<div class="card-body">
@@ -28,7 +28,7 @@
 								<h5 class="text-center text-success">${succMsg}</h5>
 								<c:remove var="succMsg" scope="session" />
 							</c:if>
-							
+
 							<form name="login" action="login.ik" method="post">
 								<div class="form-group">
 									<label for="exampleInputEmail1">Email address</label> <input
@@ -52,7 +52,9 @@
 				</div>
 			</div>
 		</div>
+		<div style="margin-top: 120px">
+			<%@include file="all_component/footer.jsp"%>
+		</div>
 	</div>
-	<%@include file="all_component/footer.jsp"%>
 </body>
 </html>

@@ -1,3 +1,6 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@page isELIgnored="false"%>
+
 <div class="container-fluid"
 	style="height: 10px; background-color: rgb(6, 28, 215);"></div>
 
@@ -11,20 +14,35 @@
 			</h3>
 		</div>
 
-		<div class="col-md-6">
+		<div class="col-md-5">
 			<form class="form-inline my-2 my-lg-0">
 				<input class="form-control mr-sm-2" type="search"
 					placeholder="Search" aria-label="Search">
 				<button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
 			</form>
 		</div>
-
-		<div class="col-md-3">
-			<a href="login.jsp" class="btn btn-success"><i
-				class="fa-solid fa-right-to-bracket"></i> Login</a> <a href="register.jsp"
-				class="btn btn-primary text-white"><i
-				class="fa-solid fa-user-plus "></i> Register</a>
-		</div>
+		
+		<c:if test="${not empty userobj }">
+		
+			<div class="col-md-4">
+				<a href="cart.jsp" class="btn btn-primary text-white"><i class="fa-solid fa-cart-plus"></i> Cart</a>
+				<a href="" class="btn btn-success"><i class="fa-solid fa-user"></i> ${userobj.name }</a> 
+				<a href="logout" class="btn btn-primary text-white"><i class="fa-solid fa-right-to-bracket "></i> Logout</a>
+			</div>
+		
+		</c:if>
+		
+ 	
+		<c:if test="${empty userobj }">
+			<div class="col-md-3">
+				<a href="login.jsp" class="btn btn-success"><i
+					class="fa-solid fa-right-to-bracket"></i> Login</a> <a href="register.jsp"
+					class="btn btn-primary text-white"><i
+					class="fa-solid fa-user-plus "></i> Register</a>
+			</div>
+		</c:if>
+		
+		
 	</div>
 
 </div>

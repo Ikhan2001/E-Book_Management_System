@@ -67,7 +67,7 @@
 			</tr>
 		</tbody>
 	</table>
-	<div style="margin-top: 253px">
+	<div style="margin-top: 275px">
 		<%@include file="footer.jsp"%>
 	</div>
 </body>

@@ -104,7 +104,7 @@ a:hover {
 
 
 
-		<div style="margin-top: 253px">
+		<div style="margin-top: 265px">
 			<%@include file="footer.jsp"%>
 		</div>
 	</div>

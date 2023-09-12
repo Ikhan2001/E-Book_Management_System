@@ -14,8 +14,8 @@
 <body>
 	<%@include file="all_component/navbar.jsp"%>
 	<div id="wrapper">
-		<div class="container p-2">
-			<div class="row"></div>
+		<div class="container pt-3">
+			<div class="row mt-4"></div>
 			<div class="col-md-4 offset-md-4">
 				<div class="card">
 					<div class="card-body">
@@ -67,7 +67,9 @@
 				</div>
 			</div>
 		</div>
+		<div style="margin-top: 59px">
+			<%@include file="all_component/footer.jsp"%>
+		</div>
 	</div>
-	<%@include file="all_component/footer.jsp"%>
 </body>
 </html>

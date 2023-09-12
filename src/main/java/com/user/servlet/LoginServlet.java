@@ -23,7 +23,6 @@ public class LoginServlet extends HttpServlet{
 		String email=req.getParameter("email");
 		String password=req.getParameter("password");
 		
-		System.out.println(email+" "+password);
 		UserDAOImpl dao=new UserDAOImpl(DBConnect.getConnection());
 		HttpSession session=req.getSession();
 		
@@ -37,7 +36,7 @@ public class LoginServlet extends HttpServlet{
 			User us=dao.login(email, password);
 			if(us != null) {
 				session.setAttribute("userobj", us);
-				resp.sendRedirect("home.jsp");
+				resp.sendRedirect("index.jsp");
 			}else {
 				session.setAttribute("failedMsg", "Email & Password is Invalid !!!");
 				resp.sendRedirect("login.jsp");
