@@ -17,7 +17,7 @@
 					<h3 class="mt-3">24*7 Service</h3>
 					<h4 class="mt-3">Help Line Number</h4>
 					<h3 class="mt-3 mb-4">+91 9876543212</h3>
-					<a href="index.jsp" class="btn btn-primary btn-lg pl-5 pr-5">Home</a>
+					<a href="index.jsp" class="btn btn-primary btn-lg pl-5 pr-5"><i class="fa-solid fa-house"></i> Home</a>
 				</div>
 			</div>
 		</div>

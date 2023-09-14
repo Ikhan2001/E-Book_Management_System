@@ -11,7 +11,7 @@
 	<%@include file="all_component/navbar.jsp"%>
 	<div id="wrapper">
 		<div class="container col-md-11 p-3">
-		<h3 class="text-center text-primary">Your Order</h3>
+		<h3 class="text-center text-primary mb-4">Your Order</h3>
 			<table class="table table-striped mt-3">
 				<thead class="bg-primary text-white">
 					<tr>
