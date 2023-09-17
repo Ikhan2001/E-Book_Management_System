@@ -28,28 +28,38 @@ public class RegisterServlet extends HttpServlet{
 		
 //		System.out.println(fname +" "+email+" "+phno+" "+password+" "+check);
 		
+		User us=new User();
+		us.setName(fname);
+		us.setEmail(email);
+		us.setPhno(phno);
+		us.setPassword(password);
+		
 		HttpSession session=req.getSession();
-		String page="";
+		
 		if(check !=null) {
-			User us=new User();
-			
-			us.setName(fname);
-			us.setEmail(email);
-			us.setPhno(phno);
-			us.setPassword(password);
 			
 			UserDAOImpl dao=new UserDAOImpl(DBConnect.getConnection());
-			boolean f=dao.userRegister(us);
+			boolean f2=dao.checkUser(email);
 			
-			if(true) {
+			if(f2) {
 				
-				session.setAttribute("succMsg", "Registration Successfully...");
-				resp.sendRedirect("register.jsp");
+				boolean f=dao.userRegister(us);
+				
+				if(f) {
+					
+					session.setAttribute("succMsg", "Registration Successfully...");
+					resp.sendRedirect("register.jsp");
+					
+				}else {
+					session.setAttribute("failedMsg", "Something went wrong on Server");
+					resp.sendRedirect("register.jsp");
+				}
 				
 			}else {
-				session.setAttribute("failedMsg", "Something went wrong on Server");
+				session.setAttribute("failedMsg", "User Already Exist Try Another Email Id !!!");
 				resp.sendRedirect("register.jsp");
 			}
+		
 		}else {
 
 			session.setAttribute("failedMsg", "Please Click Agree On Terms & Cond.");
