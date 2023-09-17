@@ -69,21 +69,7 @@ a:hover {
 					</a>
 				</div>
 
-				<div class="col-md-4 mt-3">
-					<a href="user_address.jsp">
-						<div class="card">
-							<div class="card-body text-center">
-								<div class="text-warning">
-									<i class="fa-solid fa-location-dot fa-3x"></i>
-								</div>
-								<h4>Your Address</h4>
-								<p>Edit Address</p>
-							</div>
-						</div>
-					</a>
-				</div>
-
-				<div class="col-md-4 mt-3">
+				<div class="col-md-6 mt-3">
 					<a href="order.jsp">
 						<div class="card">
 							<div class="card-body text-center">
@@ -97,7 +83,7 @@ a:hover {
 					</a>
 				</div>
 
-				<div class="col-md-4 mt-3">
+				<div class="col-md-6 mt-3">
 					<a href="helpline.jsp">
 						<div class="card">
 							<div class="card-body text-center">
